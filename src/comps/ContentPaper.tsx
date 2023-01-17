@@ -129,7 +129,7 @@ const ContentComponent = (item: ContentProps) => {
 export function ContentPaper() {
   return (
     <div className="max-w-7xl mx-auto">
-      <div className="flex p-4">
+      <div className="flex flex-col md:flex-row p-4">
         {mockData
           .filter((item) => item.isMain)
           .map((item, index) => (
@@ -141,7 +141,7 @@ export function ContentPaper() {
               isMain={item.isMain}
             />
           ))}
-        <div className="w-1/2 flex flex-col">
+        <div className="w-full md:w-1/2 flex flex-col">
           {eventData.map((item, index) => (
             <EventCard
               key={index}

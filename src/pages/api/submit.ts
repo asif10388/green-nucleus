@@ -65,8 +65,6 @@ export default async function handler(
         ? `${req.query.type}!A1:E1`
         : `${req.query.type}!A1:H1`;
 
-    console.log(range);
-
     const response = await sheet.spreadsheets.values.append({
       spreadsheetId: process.env.GOOGLE_SHEET_ID,
       range: range,

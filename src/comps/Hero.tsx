@@ -5,23 +5,24 @@ const data = [
   {
     title: "The Green Nucleus",
     description: "The Green Nucleus",
-    image: "https://images.unsplash.com/photo-1661956600684-97d3a4320e45",
+    image:
+      "./assets/Electron-beam-accelerator-and-detail-of-the-irradiation-process.png",
   },
   {
     title: "The Green Nucleus",
     description: "The Green Nucleus",
-    image: "https://images.unsplash.com/photo-1673659918897-5b5efac8b52d",
+    image: "./assets/scan_system01.jpg",
   },
   {
     title: "The Green Nucleus",
     description: "The Green Nucleus",
-    image: "https://images.unsplash.com/photo-1673753484869-eb82dcb145e5",
+    image: "./assets/19042391.jpg",
   },
 ];
 
 const Hero = () => {
   return (
-    <div className="max-w-screen h-screen flex">
+    <div className="max-w-screen md:h-screen flex">
       <Carousel
         sx={{ flex: 1 }}
         mx="auto"
@@ -43,7 +44,7 @@ const Hero = () => {
       >
         {data.map((item, index) => (
           <Carousel.Slide key={index}>
-            <div className="flex flex-col items-center justify-center">
+            <div className="flex flex-col items-center justify-center  after:content-['\A'] after:bg-black after:absolute after:w-full after:h-full after:top-0 after:left-0 after:opacity-30">
               <img
                 src={item.image}
                 alt={item.title}
